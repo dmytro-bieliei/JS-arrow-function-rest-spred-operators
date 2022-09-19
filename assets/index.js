@@ -26,4 +26,6 @@ const calcFunc = function(operator, ...numbers){
 
 // Имея массив чисел, найдите в нем самое большое. Не используйте циклы или методы перебора массива.
 
-const largestNumber = function
+const largestNumber = (...numbers) => Math.max(...numbers);
+
+//потрібно додати перевірку на числа
