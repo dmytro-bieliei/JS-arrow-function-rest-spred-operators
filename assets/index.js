@@ -6,7 +6,7 @@ const quantityOfLines = (...string) => string.filter((element) => typeof element
 // Создайте функцию продвинутого калькулятора. Он принимает знак, а  затем неограниченное количество чисел, над которыми проведет указанную операцию. 
 
 const calcFunc = function(operator, ...numbers){
-  switch(operator){
+  switch(operator.trim()){
     case '*' : {
       return numbers.reduce((num1, num2) => num1 * num2);
     }
@@ -19,8 +19,10 @@ const calcFunc = function(operator, ...numbers){
     case '-' : {
       return numbers.reduce((num1, num2) => num1 - num2);
     }
+    default: return NaN;
   }
 }
+
 
 // Имея массив чисел, найдите в нем самое большое. Не используйте циклы или методы перебора массива.
 
